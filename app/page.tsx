@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { setArticles } from '@/store/index'
 import Navbar from '@/components/NavBar'

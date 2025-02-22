@@ -28,7 +28,7 @@ export async function GET(req:NextRequest) {
         await db.insert(articles).values(formattedArticles);
         return NextResponse.json(formattedArticles)
     } catch(err) {
-        NextResponse.json({error: "Internal Server Error"}, {status: 500});
+        NextResponse.json({error: err}, {status: 500});
     }
 
 }

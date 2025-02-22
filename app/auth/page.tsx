@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import {userAuth} from '@/utils/firebase'
 import { useDispatch } from 'react-redux';
 import { setUser } from '@/store/index';

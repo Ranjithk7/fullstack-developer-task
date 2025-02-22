@@ -1,6 +1,6 @@
 'use client'
 import { useSelector } from 'react-redux';
-import React, { useEffect } from 'react'
+import React from 'react'
 import ArticleCard from '@/components/ArticleCard';
 
 export default function ArticleDetail({params}: {params: any}) {
