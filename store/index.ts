@@ -6,7 +6,7 @@ const preferencesSlice = createSlice({
     category: "Technology"
   },
   reducers: {
-    setCategory: (state: any, action: any) => {
+    setCategory: (state: any, action: PayloadAction<any>) => {
       state.category = action.payload;
       localStorage.setItem("category", action.payload);
     },
@@ -19,7 +19,7 @@ const articleSlice = createSlice({
     articles: [],
   },
   reducers: {
-    setArticles: (state: any, action: any) => {
+    setArticles: (state: any, action: PayloadAction<any>) => {
       state.articles = action.payload;
     }
   },
