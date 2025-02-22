@@ -1,0 +1,8 @@
+{
+    "schema": "./drizzle/schema.ts",
+    "out": "./drizzle/migrations",
+    "dialect": "postgresql",
+    "dbCredentials": {
+      "url": "postgresql://articledb_owner:npg_eP2mRSHw4xvL@ep-orange-union-a5yv0bhd-pooler.us-east-2.aws.neon.tech/articledb?sslmode=require"
+    }
+  }
