@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCategory } from '@/store/index'
+import CategoryInputField from './CategoryInputField';
 
 export default function CategorySelector() {
     const dispatch = useDispatch();
@@ -9,7 +10,7 @@ export default function CategorySelector() {
     const categories = ["Technology", "Finance", "Health", "Sports"];
 
     return (
-        <div className="p-4 flex gap-3">
+        <div className="p-4 flex gap-3 items-center">
         <label className="block text-lg font-bold">Select Category:</label>
         <select
           className="p-2 border rounded text-black"
@@ -20,6 +21,7 @@ export default function CategorySelector() {
             <option key={cat} value={cat}>{cat}</option>
           ))}
         </select>
+        <CategoryInputField />
       </div>
     )
 }
