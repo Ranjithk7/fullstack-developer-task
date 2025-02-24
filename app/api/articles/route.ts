@@ -8,9 +8,11 @@ export async function GET(req:NextRequest) {
     try {
         const { searchParams } = new URL(req.url);
         const category = searchParams.get("category");
+        console.log(category);
+                
         if (!category) return NextResponse.json({error: "Category is Required"}, {status: 400});
 
-        const existingArticle = await db.select().from(articles).where(eq(articles.category, category))
+        const existingArticle = await db.select().from(articles).where(eq(articles.category, category))        
 
         if (existingArticle.length > 0) {
             return NextResponse.json(existingArticle);
@@ -23,7 +25,7 @@ export async function GET(req:NextRequest) {
             link: article.link,
             snippet: article.snippet || "",
             category
-        }));
+        }));        
 
         await db.insert(articles).values(formattedArticles);
         return NextResponse.json(formattedArticles)
